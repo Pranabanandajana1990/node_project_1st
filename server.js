@@ -17,6 +17,8 @@
 const express = require('express')
 const app = express()
 const db = require('./db')
+require('dotenv').config();
+
 const PORT = process.env.PORT || 3000;
 
 // bodyparser take the body object and act as an middleware to process it

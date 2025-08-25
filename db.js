@@ -1,8 +1,10 @@
 const mongoose = require(`mongoose`);
-
+require('dotenv').config();
 // define the mongodb connection URL
 // const mongoURL = 'mongodb://localhost:27017/mydb1' // we can mydatabasepranab with any other database name
-const mongoURL = 'mongodb://127.0.0.1:27017/mydb1'; // Use IPv4 instead of 'localhost'
+// const mongoURL = 'mongodb://127.0.0.1:27017/mydb1'; // Use IPv4 instead of 'localhost'
+// const mongoURL = process.env.LOCAL_DB_URL;
+const mongoURL = process.env.DB_URL;
 
 // setup MongoDB connection
 mongoose.connect(mongoURL)
